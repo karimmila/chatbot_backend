@@ -5,6 +5,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA  # Use RetrievalQA instead of ConversationalRetrievalChain
 from pathlib import Path
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from langserve import add_routes
 import os
@@ -95,6 +96,16 @@ except Exception as e:
 
 # Create a FastAPI app and add LangServe routes for your chain.
 app = FastAPI(title="Promtior Chatbot API")
+
+# Add CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow frontend origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods (POST, GET, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
+
 add_routes(app, qa_chain, path="/query")
 
 if __name__ == "__main__":
