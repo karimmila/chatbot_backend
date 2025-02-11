@@ -1,5 +1,7 @@
 # Chatbot Assistant Documentation
 
+[Deployed frontend Link](https://mango-wave-07f8b9f10.4.azurestaticapps.net/)
+
 ## 1. Project Overview
 
 ### Approach and Solution
@@ -35,6 +37,8 @@ Additionally, for scraping data from the Promtior website, we used Firecrawl—a
 4. Deploying the Chatbot
 
    - The FastAPI server ensures the chatbot is accessible through a simple API endpoint.
+
+   - The backend is deployed in azure App Service, while the frontend is deployed in a Static Web App. Both using Contious integration when pushed to main branch.
 
 ### Challenges & How We Solved Them
 
