@@ -56,7 +56,3 @@ coverage/
 
 # ✅ LangServe specific cache files
 .langchain/
-
-# ✅ Docker (if using Docker)
-docker-compose.override.yml
-Dockerfile

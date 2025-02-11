@@ -1,8 +1,12 @@
-fastapi
-uvicorn
 langchain
 openai
 faiss-cpu
 langchain-community
 tiktoken
 langchain-openai
+langserve
+pypdf
+fastapi
+uvicorn
+sse_starlette
+python-dotenv
